@@ -302,12 +302,19 @@ textarea:active {
 }
 
 .main-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+
   height: 3.5rem; /* 56px */
 
   border-bottom: var(--border-width) solid hsl(var(--border));
+  background-color: hsl(var(--background));
 }
 
 .header-container {
+  padding: 0 1rem; /* 0 16px */
+
   max-width: 56rem; /* 869px */
   width: 100%;
   height: 100%;
@@ -317,8 +324,6 @@ textarea:active {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding: 0 1rem; /* 0 16px */
 }
 
 .logo {
@@ -332,4 +337,32 @@ textarea:active {
   gap: 1rem; /* 16px */
 
   font-weight: 500;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+
+  height: 3.5rem; /* 56px */
+
+  border-top: var(--border-width) solid hsl(var(--border));
+  background-color: hsl(var(--background));
+}
+
+.footer-container {
+  padding: 0 1rem; /* 0 16px */
+
+  max-width: 56rem; /* 869px */
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+
+  text-align: center;
+  color: hsl(var(--muted-foreground));
 }
