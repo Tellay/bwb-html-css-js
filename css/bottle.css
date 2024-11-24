@@ -118,7 +118,7 @@ header {
   transform: translate(-50%, -50%);
 
   font-weight: 600;
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.875rem; /* 14px */
   color: hsl(var(--background));
 }
 

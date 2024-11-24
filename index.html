@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/globals.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Brainy Water Bottle</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="hero">
+        <h1 class="hero-title">Hydrate Your Future</h1>
+        <p class="hero-description">
+          The Brainy Water Bottle (BWB) is a smart bottle that measures water
+          temperature hourly or throughout the day, bringing innovation and
+          technology closer to your hydration routine.
+        </p>
+
+        <div class="hero-btns">
+          <a href="./login.html" class="btn-primary">Try Now</a>
+          <a href="./learnmore.html" class="btn-secondary">Learn More</a>
+        </div>
+
+        <img
+          class="hero-img"
+          src="./images/example_bottles.jpg"
+          alt="Two modern thermos bottles"
+        />
+      </section>
+
+      <section class="features">
+        <h2 class="features-title">Features</h2>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".swiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

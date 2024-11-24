@@ -1,0 +1,77 @@
+.container {
+  max-width: 56rem; /* 869px */
+  margin: 0 auto;
+
+  padding: 1.5rem 1rem; /* 24px 16px */
+
+  display: flex;
+  flex-direction: column;
+  gap: 5.5rem; /* 88px */
+
+  min-height: 100vh;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem; /* 26px */
+
+  align-items: center;
+
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.25rem; /* 36px */
+}
+
+.hero-description {
+  font-weight: 500;
+  /* font-size: 1.125rem; */ /* 18px */
+  color: hsl(var(--muted-foreground));
+}
+
+.hero-btns {
+  display: flex;
+  gap: 0.5rem; /* 8px */
+}
+
+.hero-img {
+  width: 100%;
+
+  border-radius: var(--radius);
+  border: var(--border-width) solid hsl(var(--border));
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem; /* 28px */
+}
+
+.features-title {
+  font-size: 1.75rem; /* 28px */
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  background-color: red;
+}
