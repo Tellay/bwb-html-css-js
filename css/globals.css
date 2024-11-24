@@ -366,3 +366,7 @@ textarea:active {
   text-align: center;
   color: hsl(var(--muted-foreground));
 }
+
+.cancel-btn {
+  width: 100%;
+}
