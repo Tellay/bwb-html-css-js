@@ -224,3 +224,53 @@ input[type="password"]::-webkit-contacts-auto-fill-button {
   font-size: 0.875rem; /* 14px */
   color: hsl(var(--destructive));
 }
+
+.dialog {
+  padding: 1.5rem 1rem; /* 24px 16px */
+
+  position: absolute;
+  inset: 0;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dialog-content {
+  max-width: 24rem; /* 384px */
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem; /* 28px */
+
+  padding: 1.5rem; /* 24px */
+
+  background-color: hsl(var(--background));
+
+  border-radius: var(--radius);
+  border: var(--border-width) solid hsl(var(--border));
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dialog-close-btn {
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
+
+  stroke: hsl(var(--muted-foreground));
+}
+
+.dialog-close-btn:focus-visible {
+  outline: var(--outline-width) solid hsl(var(--border));
+}
+
+.dialog-header h2 {
+  font-size: 1.125rem; /* 18px */
+}
