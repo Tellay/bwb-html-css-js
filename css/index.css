@@ -1,6 +1,6 @@
 .container {
   max-width: 56rem; /* 869px */
-  margin: 0 auto;
+  margin: 6rem auto; /* 96px auto */
 
   padding: 1.5rem 1rem; /* 24px 16px */
 
@@ -27,7 +27,7 @@
 
 .hero-description {
   font-weight: 500;
-  /* font-size: 1.125rem; */ /* 18px */
+  font-size: 1.125rem; /* 18px */
   color: hsl(var(--muted-foreground));
 }
 

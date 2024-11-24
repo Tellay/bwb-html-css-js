@@ -1,6 +1,6 @@
 ## TODO:
 
-- [ ] Acabar as restantes páginas, tais como, bottle, landing page, about us, etc...
+- [ ] Acabar as restantes páginas, tais como, bottle, landing page, about us, feedback, etc...
 
 - [x] Validar os campos dos formulários por JavaScript
 

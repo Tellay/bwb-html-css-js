@@ -274,3 +274,62 @@ input[type="password"]::-webkit-contacts-auto-fill-button {
 .dialog-header h2 {
   font-size: 1.125rem; /* 18px */
 }
+
+textarea {
+  min-height: 9rem; /* 144px */
+  padding: 0.75rem 0.875rem; /* 12px 14px */
+  resize: vertical;
+
+  font-size: 1rem; /* 16px */
+  font-weight: 600;
+
+  background: transparent;
+  color: hsl(var(--foreground));
+
+  border: var(--border-width) solid hsl(var(--border));
+  border-radius: var(--radius);
+
+  transition: all var(--transition-duration) ease-in;
+}
+
+textarea:focus-visible {
+  outline: var(--outline-width) solid hsl(var(--ring));
+  outline-offset: var(--outline-width);
+}
+
+textarea:active {
+  transform: scale(0.98);
+}
+
+.main-header {
+  height: 3.5rem; /* 56px */
+
+  border-bottom: var(--border-width) solid hsl(var(--border));
+}
+
+.header-container {
+  max-width: 56rem; /* 869px */
+  width: 100%;
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 1rem; /* 0 16px */
+}
+
+.logo {
+  width: 2rem; /* 32px */
+  height: 2rem; /* 32px */
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* 16px */
+
+  font-weight: 500;
+}
