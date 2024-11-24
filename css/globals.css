@@ -339,7 +339,7 @@ textarea:active {
   font-weight: 500;
 }
 
-footer {
+.main-footer {
   position: sticky;
   bottom: 0;
   left: 0;
