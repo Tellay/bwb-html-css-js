@@ -6,12 +6,13 @@
 
     <link rel="stylesheet" href="./css/globals.css" />
     <link rel="stylesheet" href="./css/bottle.css" />
-    
+
     <link rel="icon" href="./assets/logo.svg" />
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/delete-bottle-dialog.js" defer></script>
+    <script src="./js/rename-bottle-dialog.js" defer></script>
 
     <title>Bottle</title>
   </head>
@@ -65,12 +66,68 @@
       </div>
 
       <footer>
-        <button class="delete-bottle-btn btn-destructive" id="open-delete-bottle-dialog-btn">
+        <button
+          class="rename-bottle-btn btn-secondary"
+          id="open-rename-bottle-dialog-btn"
+        >
+          <i data-lucide="pencil-line"></i>
+          Rename Bottle
+        </button>
+
+        <button
+          class="delete-bottle-btn btn-destructive"
+          id="open-delete-bottle-dialog-btn"
+        >
           <i data-lucide="trash-2"></i>
           Delete Bottle
         </button>
       </footer>
 
+      <!-- Rename Bottle Dialog -->
+      <div class="dialog" id="rename-bottle-dialog">
+        <div class="dialog-content">
+          <div class="dialog-header">
+            <h2>Rename Bottle</h2>
+            <button class="dialog-close-btn" id="close-rename-bottle-dialog">
+              <i data-lucide="x"></i>
+            </button>
+          </div>
+
+          <form method="get" class="form" id="rename-bottle-form">
+            <div class="inputs">
+              <div class="input-container">
+                <label for="bottle-name">New Bottle Name</label>
+                <input
+                  type="text"
+                  name="new-bottle-name"
+                  id="new-bottle-name"
+                  placeholder="New bottle name"
+                  required
+                />
+                <p class="form-error" id="new-bottle-name-error"></p>
+              </div>
+
+              <div class="input-container">
+                <label for="bottle-name"
+                  >To confirm, type "Bottle 1" in the box below</label
+                >
+                <input
+                  type="text"
+                  name="confirm-bottle-name"
+                  id="confirm-bottle-name"
+                  placeholder='To confirm, type "Bottle 1"'
+                  required
+                />
+                <p class="form-error" id="confirm-bottle-name-error"></p>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary">Rename Bottle</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Delete Bottle Dialog -->
       <div class="dialog" id="delete-bottle-dialog">
         <div class="dialog-content">
           <div class="dialog-header">
@@ -79,25 +136,28 @@
               <i data-lucide="x"></i>
             </button>
           </div>
-  
+
           <form method="get" class="form" id="delete-bottle-form">
             <div class="inputs">
               <div class="input-container">
-                <label for="bottle-name">To confirm, type "Bottle 1" in the box below</label>
+                <label for="bottle-name"
+                  >To confirm, type "Bottle 1" in the box below</label
+                >
                 <input
                   type="text"
                   name="bottle-name"
                   id="bottle-name"
-                  placeholder="To confirm, type &quot;Bottle 1&quot;"
+                  placeholder='To confirm, type "Bottle 1"'
                   required
                 />
                 <p class="form-error" id="bottle-name-error"></p>
               </div>
             </div>
-  
+
             <button type="submit" class="btn-destructive">Delete Bottle</button>
           </form>
         </div>
+      </div>
     </section>
 
     <script>

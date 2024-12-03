@@ -170,10 +170,15 @@ header {
 
 footer {
   display: flex;
+  justify-content: flex-end;
+  gap: 1rem; /* 16px */
 }
 
-.delete-bottle-btn {
-  margin-left: auto;
+.rename-bottle-btn svg {
+  width: 1.125rem; /* 18px */
+  height: 1.125rem; /* 18px */
+
+  stroke: hsl(var(--secondary-foreground));
 }
 
 .delete-bottle-btn svg {
@@ -187,4 +192,10 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 1.75rem; /* 28px */
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* 16px */
 }
