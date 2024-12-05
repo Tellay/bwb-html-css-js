@@ -1,36 +1,36 @@
-const addBottleDialog = document.getElementById("add-bottle-dialog");
+const redeemBottleDialog = document.getElementById("redeem-bottle-dialog");
 
-const openAddBottleDialogBtn = document.getElementById(
-  "open-add-bottle-dialog-btn"
+const openRedeemBottleDialogBtn = document.getElementById(
+  "open-redeem-bottle-dialog-btn"
 );
 
-const closeAddBottleDialogBtn = document.getElementById(
-  "close-add-bottle-dialog"
+const closeRedeemBottleDialogBtn = document.getElementById(
+  "close-redeem-bottle-dialog"
 );
 
-openAddBottleDialogBtn.addEventListener("click", () => {
-  addBottleDialog.style.display = "flex";
+openRedeemBottleDialogBtn.addEventListener("click", () => {
+  redeemBottleDialog.style.display = "flex";
 });
 
-closeAddBottleDialogBtn.addEventListener("click", () => {
-  addBottleDialog.style.display = "none";
+closeRedeemBottleDialogBtn.addEventListener("click", () => {
+  redeemBottleDialog.style.display = "none";
 });
 
 window.addEventListener("click", (event) => {
-  if (event.target === addBottleDialog) {
-    addBottleDialog.style.display = "none";
+  if (event.target === redeemBottleDialog) {
+    redeemBottleDialog.style.display = "none";
   }
 });
 
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && addBottleDialog.style.display === "flex") {
-    addBottleDialog.style.display = "none";
+  if (event.key === "Escape" && redeemBottleDialog.style.display === "flex") {
+    redeemBottleDialog.style.display = "none";
   }
 });
 
 // ----------------------------------------------------------------------
 
-const addBottleForm = document.getElementById("add-bottle-form");
+const redeemBottleForm = document.getElementById("redeem-bottle-form");
 
 const bottleIdField = document.getElementById("bottleId");
 const bottleIdError = document.getElementById("bottleId-error");
@@ -38,7 +38,7 @@ const bottleIdError = document.getElementById("bottleId-error");
 const bottleNameField = document.getElementById("bottleName");
 const bottleNameError = document.getElementById("bottleName-error");
 
-function validateAddBottleForm(event) {
+function validateRedeemBottleForm(event) {
   event.preventDefault();
 
   bottleIdError.textContent = "";
@@ -67,10 +67,10 @@ function validateAddBottleForm(event) {
   }
 
   if (isValid) {
-    addBottleForm.reset();
-    addBottleDialog.style.display = "none";
+    redeemBottleForm.reset();
+    redeemBottleDialog.style.display = "none";
     window.location.href = "./bottle.html";
   }
 }
 
-addBottleForm.addEventListener("submit", validateAddBottleForm);
+redeemBottleForm.addEventListener("submit", validateRedeemBottleForm);

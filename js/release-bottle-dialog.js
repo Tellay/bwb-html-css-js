@@ -1,41 +1,41 @@
-const deleteBottleDialog = document.getElementById("delete-bottle-dialog");
+const releaseBottleDialog = document.getElementById("release-bottle-dialog");
 
-const openDeleteBottleDialogBtn = document.getElementById(
-  "open-delete-bottle-dialog-btn"
+const openReleaseBottleDialogBtn = document.getElementById(
+  "open-release-bottle-dialog-btn"
 );
 
-const closeDeleteBottleDialogBtn = document.getElementById(
-  "close-delete-bottle-dialog"
+const closeReleaseBottleDialogBtn = document.getElementById(
+  "close-release-bottle-dialog"
 );
 
-openDeleteBottleDialogBtn.addEventListener("click", () => {
-  deleteBottleDialog.style.display = "flex";
+openReleaseBottleDialogBtn.addEventListener("click", () => {
+  releaseBottleDialog.style.display = "flex";
 });
 
-closeDeleteBottleDialogBtn.addEventListener("click", () => {
-  deleteBottleDialog.style.display = "none";
+closeReleaseBottleDialogBtn.addEventListener("click", () => {
+  releaseBottleDialog.style.display = "none";
 });
 
 window.addEventListener("click", (event) => {
-  if (event.target === deleteBottleDialog) {
-    deleteBottleDialog.style.display = "none";
+  if (event.target === releaseBottleDialog) {
+    releaseBottleDialog.style.display = "none";
   }
 });
 
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && deleteBottleDialog.style.display === "flex") {
-    deleteBottleDialog.style.display = "none";
+  if (event.key === "Escape" && releaseBottleDialog.style.display === "flex") {
+    releaseBottleDialog.style.display = "none";
   }
 });
 
 // ----------------------------------------------------------------------
 
-const deleteBottleForm = document.getElementById("delete-bottle-form");
+const releaseBottleForm = document.getElementById("release-bottle-form");
 
 const bottleNameField = document.getElementById("bottle-name");
 const bottleNameError = document.getElementById("bottle-name-error");
 
-function validateDeleteBottleForm(event) {
+function validateReleaseBottleForm(event) {
   event.preventDefault();
 
   const correctBottleName = "Bottle 1";
@@ -56,10 +56,10 @@ function validateDeleteBottleForm(event) {
   }
 
   if (isValid) {
-    deleteBottleForm.reset();
-    deleteBottleDialog.style.display = "none";
+    releaseBottleForm.reset();
+    releaseBottleDialog.style.display = "none";
     window.location.href = "./dashboard.html";
   }
 }
 
-deleteBottleForm.addEventListener("submit", validateDeleteBottleForm);
+releaseBottleForm.addEventListener("submit", validateReleaseBottleForm);
