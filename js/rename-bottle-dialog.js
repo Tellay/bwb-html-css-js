@@ -10,21 +10,25 @@ const closeRenameBottleDialogBtn = document.getElementById(
 
 renameBottleDialogBtn.addEventListener("click", () => {
   renameBottleDialog.style.display = "flex";
+  document.body.style.overflow = "hidden";
 });
 
 closeRenameBottleDialogBtn.addEventListener("click", () => {
   renameBottleDialog.style.display = "none";
+  document.body.style.overflow = "auto";
 });
 
 window.addEventListener("click", (event) => {
   if (event.target === renameBottleDialog) {
     renameBottleDialog.style.display = "none";
+    document.body.style.overflow = "auto";
   }
 });
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && renameBottleDialog.style.display === "flex") {
     renameBottleDialog.style.display = "none";
+    document.body.style.overflow = "auto";
   }
 });
 

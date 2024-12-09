@@ -10,21 +10,25 @@ const closeReleaseBottleDialogBtn = document.getElementById(
 
 openReleaseBottleDialogBtn.addEventListener("click", () => {
   releaseBottleDialog.style.display = "flex";
+  document.body.style.overflow = "hidden";
 });
 
 closeReleaseBottleDialogBtn.addEventListener("click", () => {
   releaseBottleDialog.style.display = "none";
+  document.body.style.overflow = "auto";
 });
 
 window.addEventListener("click", (event) => {
   if (event.target === releaseBottleDialog) {
     releaseBottleDialog.style.display = "none";
+    document.body.style.overflow = "auto";
   }
 });
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && releaseBottleDialog.style.display === "flex") {
     releaseBottleDialog.style.display = "none";
+    document.body.style.overflow = "auto";
   }
 });
 
